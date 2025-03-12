@@ -3,10 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <div class="board">
+    <h1>Tic-Tac-Toe</h1>
+    <p id="message"></p>
+    <p id="winner"></p>
+    <button onclick="resetGame()">Reset Game</button>
+    <div id="currentPlayer">Player 1 (X)</div>
+    <p>Player 1 (X): <span id="player1-score">0</span></p>
+    <p>Player 2 (O): <span id="player2-score">0</span></p>
+    <p>Current Player: <span id="current-player">Player 1</span></p>
+    <div id="game-status"></div>
+    <div id="board">
       <div class="square" data-index="0"></div>
       <div class="square" data-index="1"></div>
       <div class="square" data-index="2"></div>
@@ -17,6 +27,14 @@
       <div class="square" data-index="7"></div>
       <div class="square" data-index="8"></div>
     </div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-message"></span>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
